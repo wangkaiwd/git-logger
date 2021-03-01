@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+const { program } = require('commander');
+const pkg = require('../package.json');
+const Logger = require('../lib');
+program.version(pkg.version);
+
+program
+  .option('-d, --directory <filename>', 'specify log output file')
+  .option('-s, --start <start time>', 'specify start time')
+  .option('-e, --end <end time>', 'specify end time')
+  .option('-a, --author <commit author>', 'specify end time')
+program.parse(process.argv);
+
+new Logger(program.opts()).log();
