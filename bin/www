@@ -8,7 +8,7 @@ program
   .option('-d, --directory <filename>', 'specify log output file')
   .option('-s, --start <start time>', 'specify start time')
   .option('-e, --end <end time>', 'specify end time')
-  .option('-a, --author <commit author>', 'specify end time')
+  .requiredOption('-a, --author <commit author>', 'specify commit author');
 program.parse(process.argv);
 
 new Logger(program.opts()).log();
