@@ -5,7 +5,7 @@ const Logger = require('../lib');
 program.version(pkg.version);
 
 program
-  .option('-d, --directory <filename>', 'specify log output file')
+  .option('-f, --filename <filename>', 'specify log output file')
   .option('-s, --start <start time>', 'specify start time')
   .option('-e, --end <end time>', 'specify end time')
   .requiredOption('-a, --author <commit author>', 'specify commit author');
